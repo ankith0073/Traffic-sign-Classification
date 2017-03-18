@@ -15,21 +15,21 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/histogram_Dataset.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./histogram_Dataset.jpg "Visualization"
+[image2]: ./grayscale.jpg "Grayscaling"
+[image3]: ./random_noise.jpg "Random Noise"
+[image4]: ./placeholder.png "Traffic Sign 1"
+[image5]: ./placeholder.png "Traffic Sign 2"
+[image6]: ./placeholder.png "Traffic Sign 3"
+[image7]: ./placeholder.png "Traffic Sign 4"
+[image8]: ./placeholder.png "Traffic Sign 5"
 
-[augmentation1]: ./examples/translation.png
-[augmentation2]: ./examples/rotation.png
-[augmentation3]: ./examples/scaling.png
-[augmentation4]: ./examples/brightness.png
+[augmentation1]: ./translation.png
+[augmentation2]: ./rotation.png
+[augmentation3]: ./scaling.png
+[augmentation4]: ./brightness.png
 
-[preprocessed]: ./examples/preprocessed.png
+[preprocessed]: ./preprocessed.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -66,8 +66,6 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 Looking at the distribution of each class of the dataset, we can see that classes are unbalanced, i.e Class 0 has 180 images and class 2 has nearly 1800 images
 
 ###Design and Test a Model Architecture
-
-####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
 1. The important step in the neural network training is the data preprocessing,explained as below 
 
