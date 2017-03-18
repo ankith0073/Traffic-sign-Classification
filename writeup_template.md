@@ -39,8 +39,6 @@ Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/4
 ---
 ###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
 Link to my project code [project code](https://github.com/ankith0073/Traffic-sign-Classification/blob/master/Traffic_Sign_Classifier.ipynb
 
 ###Data Set Summary & Exploration
@@ -167,5 +165,5 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 4.08620304e-10		| End of no passing								|
 
 THe predictions for each test data is as shown below,
-First column shows the Input traffic sign data, Second column is the traffic sign prediction for a given input image with the highest softmax probablitily
+First column shows the Input traffic sign data, Second column is the traffic sign prediction for a given input image with the highest softmax probablity
 ![alt text][predictions]
