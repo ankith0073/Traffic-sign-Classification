@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/histogram_Dataset.jpg "Visualization"
+[image1]: ./examples/histogram_Dataset.png "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/50.jpg "Traffic Sign 1"
