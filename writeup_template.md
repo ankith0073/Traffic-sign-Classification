@@ -15,21 +15,21 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./histogram_Dataset.jpg "Visualization"
-[image2]: ./grayscale.jpg "Grayscaling"
-[image3]: ./random_noise.jpg "Random Noise"
-[image4]: ./placeholder.png "Traffic Sign 1"
-[image5]: ./placeholder.png "Traffic Sign 2"
-[image6]: ./placeholder.png "Traffic Sign 3"
-[image7]: ./placeholder.png "Traffic Sign 4"
-[image8]: ./placeholder.png "Traffic Sign 5"
+[image1]: ./examples/histogram_Dataset.jpg "Visualization"
+[image2]: ./examples/grayscale.jpg "Grayscaling"
+[image3]: ./examples/random_noise.jpg "Random Noise"
+[image4]: ./examples/50.jpg "Traffic Sign 1"
+[image5]: ./examples/60.jpg "Traffic Sign 2"
+[image6]: ./examples/halt.jpg "Traffic Sign 3"
+[image7]: ./examples/sign.jpg "Traffic Sign 4"
+[image8]: ./examples/stop.jpg "Traffic Sign 5"
 
-[augmentation1]: ./translation.png
-[augmentation2]: ./rotation.png
-[augmentation3]: ./scaling.png
-[augmentation4]: ./brightness.png
+[augmentation1]: ./examples/translation.png
+[augmentation2]: ./examples/rotation.png
+[augmentation3]: ./examples/scaling.png
+[augmentation4]: ./examples/brightness.png
 
-[preprocessed]: ./preprocessed.png
+[preprocessed]: ./examples/preprocessed.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
