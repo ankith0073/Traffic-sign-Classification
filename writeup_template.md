@@ -31,6 +31,8 @@ The goals / steps of this project are the following:
 
 [preprocessed]: ./examples/preprocessed.png
 
+[predictions]: ./examples/predictions.png
+
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -164,10 +166,6 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 | 8.12160508e-08    	| Keep right									|
 | 4.08620304e-10		| End of no passing								|
 
-
-For the second image
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .99         			| Right of way									| 
-| 7.86934095e-07    	| Beware of ice									|
-| 2.27537700e-09		| Dangerous curve to left						|
+THe predictions for each test data is as shown below,
+First column shows the Input traffic sign data, Second column is the traffic sign prediction for a given input image with the highest softmax probablitily
+![alt text][predictions]
