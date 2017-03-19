@@ -216,7 +216,7 @@ Here are the results of the prediction:
 | 60 km/h   			| No passing        							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares less favorably to the accuracy on the test set of 92.5%
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.99), and the image does contain a stop sign. The top five soft max probabilities were
 
