@@ -33,6 +33,7 @@ The goals / steps of this project are the following:
 
 [predictions]: ./examples/predictions.png
 [aug_hist]: ./examples/augmented_hist.png
+[valid_hist]: ./examples/valid_hist.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -112,9 +113,13 @@ Looking at the distribution of each class of the dataset, we can see that classe
 
 The code for this step is contained in the fourth to fourteenth code cells of the IPython notebook.
 
-2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+2. Setting up training, testing and validation data.
 
- The data is already packed into train.p, Valid.p, test.p pickle files. The code for this step is contained in the 2nd code coll of the iPython notebook. But to give the data into the neural network for training it is  good practise to shuffle the data. So it is made sure that the training data is shuffled before training.
+ The data is already packed into train.p, Valid.p, test.p pickle files. The code for this step is contained in the 2nd code coll of the iPython notebook. But to give the data into the neural network for training it is  good practise to shuffle the data. So it is made sure that the training data is shuffled before training. Also when referred to 1st step, It gives an insight how artificial data is augmented to make the classes balanced.
+  
+  The histogram of the validation set is as shown below
+  
+  ![alt_text][valid_hist]
 
 3. The initial model was trained with Lenet Nodel achieving an accuracy of 89% out of the box. The original Lenet model is tweaked to achieve a validation accuracy of ~94% 
 The code for my final model is located in the 20th cell of the ipython notebook. 
