@@ -69,25 +69,46 @@ Looking at the distribution of each class of the dataset, we can see that classe
 ###Design and Test a Model Architecture
 
 1. The important step in the neural network training is the data preprocessing,explained as below 
+ 
+ * Augment the classes with less training examples         
+ * Convert all images to grayscale 
+ * Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
+ * Histogram normalize the images to increase the contrast of the image      
 
-* Due to imbalance in the dataset, Data augmentation needs to be done. i.e if a particular class has less than 1000 training examples, we augment that training class till the number of examples for that particular class becomes equal to 1000. For example, if class o has 250 training examples , we augment it with 750 more images to make the total 1000. It is done by the following steps
-    * Take an image of a class whose training examples are less than 1000 in random
-    * Apply Jittering(Translation, Rotation, Scaling, Brightness) with small random values.
-    * Translation
-        ![alt text][augmentation1]
-    * Rotation 
-        ![alt text][augmentation2]
-    * Scaling 
-        ![alt text][augmentation3]
-    * Brightness 
-        ![alt text][augmentation4]
+* Augment the classes with less training examples
+
+   Due to imbalance in the dataset, Data augmentation needs to be done. i.e if a particular class has less than 1000 training examples, we augment that training class till the number of examples for that particular class becomes equal to 1000. For example, if class o has 250 training examples , we augment it with 750 more images to make the total 1000. It is done by the following steps
+ * Take an image of a class whose training examples are less than 1000 in random
+ * Apply Jittering(Translation, Rotation, Scaling, Brightness) with small random values.
+ 
+ * Translation
+ 
+ ![alt text][augmentation1]
+ 
+ * Rotation 
+ 
+ ![alt text][augmentation2]
+ 
+ * Scaling 
+ 
+ ![alt text][augmentation3]
+ 
+ * Brightness  
+ 
+ ![alt text][augmentation4]
+ 
 * The histogram of the training data after data augmentation looks like below
 ![alt text][aug_hist]
 
-* Convert all the images to grayscale and make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1 , along with histogram normalised image is shown as below.
+* Convert all the images to grayscale  
+      Convert all the images to grayscale. This reduces the processing time of neural network,i.e Network needs to train on single channel than multiple channels. The conversion also in induced from the fact that traffic signs charecteristics are its shape not the color
+   
+*  Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
+       Make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1
+       
+* Histogram normalize the images to increase the contrast of the image   
+      Histogram normalisation makes the features which needs to be seen more visible. Tge grayscale images which zero mean centered and histogram normalised images are as shown below
 ![alt text][preprocessed]
-
-Here we make sure that the data are all centered around one value and have the same variation. As we are processing traffic signs which are charecteristically determined by shape rather than color, We convert all the images to grayscale.
 
 The code for this step is contained in the fourth to fourteenth code cells of the IPython notebook.
 
