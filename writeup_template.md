@@ -37,6 +37,7 @@ The goals / steps of this project are the following:
 
 [LeNet]: ./examples/LeNet.png
 [LeNet_2]: ./examples/LeNet_2.jpg
+[softmax]: ./examples/softmax_bar.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -168,17 +169,17 @@ The code for training the model is located in the 21st cell of the ipython noteb
  
 ![alt text][LeNet]
 
-The following hyperparameters were used with validation accuracy of 81%
+The following hyperparameters were used with validation accuracy of 93.3%
 
   * Learning rate - 0.008
   * Batch size - 128 images
-  * Epochs - 10
+  * Epochs - 70
   
  The next architecture used was the Sermanet/Yann Lecun for traffic sign classification as shown below 
   
 ![alt text][LeNet_2]
 
-The following hyperparameters were used with validation accuracy of 91.9%
+The following hyperparameters were used with validation accuracy of 92.9%
 
   * Learning rate - 0.008
   * Batch size - 128 images
@@ -186,7 +187,9 @@ The following hyperparameters were used with validation accuracy of 91.9%
 
 The learning rate choice was made sure it is not very high to miss the global minimum, Not too low to make the training longer, So a value 0.008 was chosen
 
-The Thirst for high accuracy wasnt quenched yet! so with an additional convolutional layer as in step 3 was used to obtain a validation accuracy of ~95%
+The Thirst for high accuracy wasnt quenched yet! so with an additional convolutional layer as in step 3 was used to obtain a validation accuracy of ~93.8%
+
+Dropout was added to the last  fully connected layer to avoid overfitting.
  
 The code for calculating the accuracy of the model is located in the 21st cell of the Ipython notebook.
 
@@ -218,13 +221,8 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. This compares less favorably to the accuracy on the test set of 92.5%
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.99), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .99         			| Priority road									| 
-| 8.12160508e-08    	| Keep right									|
-| 4.08620304e-10		| End of no passing								|
+The top 5 softmax predictions are as shown below 
+![alt_text][softmax]
 
 THe predictions for each test data is as shown below,
 First column shows the Input traffic sign data, Second column is the traffic sign prediction for a given input image with the highest softmax probablity
