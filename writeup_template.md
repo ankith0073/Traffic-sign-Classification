@@ -35,6 +35,9 @@ The goals / steps of this project are the following:
 [aug_hist]: ./examples/augmented_hist.png
 [valid_hist]: ./examples/valid_hist.png
 
+[LeNet]: ./examples/LeNet.png
+[LeNet_2]: ./examples/LeNet_2.jpg
+
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -148,7 +151,9 @@ My final model consisted of the following layers:
 |						|												|
 
 
-4. The above model was trained with the following parameters
+4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+
+The above model was trained with the following parameters
     * Optimizer - Adam 
     * Learning rate - 0.008
     * Batch size - 128 images
@@ -157,7 +162,29 @@ My final model consisted of the following layers:
 The code for training the model is located in the 21st cell of the ipython notebook. 
 
 
-5. The implementation was started with LeNEt and after a bit of tweaking of the model(refer previous point) and hyperparameters the following accuracies were obtained 
+5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem. 
+
+ The initial Implementation was with the out of the box architecture, LeNet was used initially to train the neural network whose architecture is as shown below 
+ 
+![alt text][LeNet]
+
+The following hyperparameters were used with validation accuracy of 81%
+
+  * Learning rate - 0.008
+  * Batch size - 128 images
+  * Epochs - 10
+  
+ The next architecture used was the Sermanet/Yann Lecun for traffic sign classification as shown below 
+  
+![alt text][LeNet_2]
+
+The following hyperparameters were used with validation accuracy of 91.9%
+
+  * Learning rate - 0.008
+  * Batch size - 128 images
+  * Epochs - 70
+
+ 
 The code for calculating the accuracy of the model is located in the 21st cell of the Ipython notebook.
 
 My final model results were:
