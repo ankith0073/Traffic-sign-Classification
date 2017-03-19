@@ -102,15 +102,15 @@ Looking at the distribution of each class of the dataset, we can see that classe
 
 * Convert all the images to grayscale
 
-      Convert all the images to grayscale. This reduces the processing time of neural network,i.e Network needs to train on single channel than multiple channels. The conversion also in induced from the fact that traffic signs charecteristics are its shape not the color
+     Convert all the images to grayscale. This reduces the processing time of neural network,i.e Network needs to train on single channel than multiple channels. The conversion also in induced from the fact that traffic signs charecteristics are its shape not the color
    
 *  Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
 
-       Make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1
+      Make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1
        
 * Histogram normalize the images to increase the contrast of the image  
 
-      Histogram normalisation makes the features which needs to be seen more visible. The grayscale images which zero mean centered and histogram normalised images are as shown below
+     Histogram normalisation makes the features which needs to be seen more visible. The grayscale images which zero mean centered and histogram normalised images are as shown below
 ![alt text][preprocessed]
 
 The code for this step is contained in the fourth to fourteenth code cells of the IPython notebook.
