@@ -32,6 +32,7 @@ The goals / steps of this project are the following:
 [preprocessed]: ./examples/preprocessed.png
 
 [predictions]: ./examples/predictions.png
+[aug_hist]: ./examples/augmented_hist.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -43,7 +44,7 @@ Link to my project code [project code](https://github.com/ankith0073/Traffic-sig
 
 ###Data Set Summary & Exploration
 
-####1. The dataset used to tarin the neural net for Traffic sign classification is German traffic sign dataset
+####1. The dataset used to train the neural net for Traffic sign classification is German traffic sign dataset
 
 The code for this step is contained in the second code cell of the IPython notebook.  
 
@@ -80,6 +81,8 @@ Looking at the distribution of each class of the dataset, we can see that classe
         ![alt text][augmentation3]
     * Brightness 
         ![alt text][augmentation4]
+* The histogram of the training data after data augmentation looks like below
+![alt text][aug_hist]
 
 * Convert all the images to grayscale and make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1 , along with histogram normalised image is shown as below.
 ![alt text][preprocessed]
