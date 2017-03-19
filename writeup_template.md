@@ -100,21 +100,21 @@ Looking at the distribution of each class of the dataset, we can see that classe
 * The histogram of the training data after data augmentation looks like below
 ![alt text][aug_hist]
 
-* Convert all the images to grayscale
-
-     Convert all the images to grayscale. This reduces the processing time of neural network,i.e Network needs to train on single channel than multiple channels. The conversion also in induced from the fact that traffic signs charecteristics are its shape not the color
+* Convert all the images to grayscale  
+      Convert all the images to grayscale. This reduces the processing time of neural network,i.e Network needs to train on single channel than multiple channels. The conversion also in induced from the fact that traffic signs charecteristics are its shape not the color
    
 *  Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
-
-      Make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1
+       Make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1
        
-* Histogram normalize the images to increase the contrast of the image  
-
-     Histogram normalisation makes the features which needs to be seen more visible. The grayscale images which zero mean centered and histogram normalised images are as shown below
+* Histogram normalize the images to increase the contrast of the image   
+      Histogram normalisation makes the features which needs to be seen more visible. Tge grayscale images which zero mean centered and histogram normalised images are as shown below
 ![alt text][preprocessed]
 
 The code for this step is contained in the fourth to fourteenth code cells of the IPython notebook.
 
+2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+
+ The data is already packed into train.p, Valid.p, test.p pickle files. The code for this step is contained in the 2nd code coll of the iPython notebook. But to give the data into the neural network for training it is  good practise to shuffle the data. So it is made sure that the training data is shuffled before training.
 
 3. The initial model was trained with Lenet Nodel achieving an accuracy of 89% out of the box. The original Lenet model is tweaked to achieve a validation accuracy of ~94% 
 The code for my final model is located in the 20th cell of the ipython notebook. 
