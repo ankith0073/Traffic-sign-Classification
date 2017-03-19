@@ -184,6 +184,7 @@ The following hyperparameters were used with validation accuracy of 91.9%
   * Batch size - 128 images
   * Epochs - 70
 
+The Thirst for high accuracy wasnt quenched yet! so with an additional convolutional layer as in step 3 was used to obtain a validation accuracy of ~95%
  
 The code for calculating the accuracy of the model is located in the 21st cell of the Ipython notebook.
 
