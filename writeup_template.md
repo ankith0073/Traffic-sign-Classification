@@ -75,47 +75,47 @@ Looking at the distribution of each class of the dataset, we can see that classe
 
 1. The important step in the neural network training is the data preprocessing,explained as below 
  
- * Augment the classes with less training examples         
- * Convert all images to grayscale 
- * Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
- * Histogram normalize the images to increase the contrast of the image      
+   * Augment the classes with less training examples         
+   * Convert all images to grayscale 
+   * Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
+   * Histogram normalize the images to increase the contrast of the image      
 
-* Augment the classes with less training examples
+ * Augment the classes with less training examples
 
    Due to imbalance in the dataset, Data augmentation needs to be done. i.e if a particular class has less than 1000 training examples, we augment that training class till the number of examples for that particular class becomes equal to 1000. For example, if class o has 250 training examples , we augment it with 750 more images to make the total 1000. It is done by the following steps
- * Take an image of a class whose training examples are less than 1000 in random
- * Apply Jittering(Translation, Rotation, Scaling, Brightness) with small random values.
+    * Take an image of a class whose training examples are less than 1000 in random
+    * Apply Jittering(Translation, Rotation, Scaling, Brightness) with small random values.
+
+    * Translation
+
+    ![alt text][augmentation1]
+
+    * Rotation 
+
+    ![alt text][augmentation2]
+
+    * Scaling 
+
+    ![alt text][augmentation3]
+
+    * Brightness  
+
+    ![alt text][augmentation4]
  
- * Translation
- 
- ![alt text][augmentation1]
- 
- * Rotation 
- 
- ![alt text][augmentation2]
- 
- * Scaling 
- 
- ![alt text][augmentation3]
- 
- * Brightness  
- 
- ![alt text][augmentation4]
- 
-* The histogram of the training data after data augmentation looks like below
+ * The histogram of the training data after data augmentation looks like below
 ![alt text][aug_hist]
 
 * Convert all the images to grayscale  
       Convert all the images to grayscale. This reduces the processing time of neural network,i.e Network needs to train on single channel than multiple channels. The conversion also in induced from the fact that traffic signs charecteristics are its shape not the color
    
-*  Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
+ *  Subtract the mean and make the imagees have same pixel variation i.e betweem [-1,1]
        Make all the images zero mean and have the same standard deviation and histogram normalize the image. The grayscale image with zero mean and deviation from -1 to 1
        
-* Histogram normalize the images to increase the contrast of the image   
+ * Histogram normalize the images to increase the contrast of the image   
       Histogram normalisation makes the features which needs to be seen more visible. Tge grayscale images which zero mean centered and histogram normalised images are as shown below
 ![alt text][preprocessed]
 
-The code for this step is contained in the fourth to fourteenth code cells of the IPython notebook.
+The code for this step is contained in the fourth to sixteenth code cells of the IPython notebook.
 
 2. Setting up training, testing and validation data.
 
@@ -155,12 +155,12 @@ My final model consisted of the following layers:
 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 The above model was trained with the following parameters
-    * Optimizer - Adam 
-    * Learning rate - 0.008
-    * Batch size - 128 images
-    * Epochs - 70
+  * Optimizer - Adam 
+  * Learning rate - 0.008
+  * Batch size - 128 images
+  * Epochs - 70
 
-The code for training the model is located in the 21st cell of the ipython notebook. 
+The code for training the model is located in the 25th cell of the ipython notebook. 
 
 
 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem. 
@@ -191,7 +191,7 @@ The Thirst for high accuracy wasnt quenched yet! so with an additional convoluti
 
 Dropout was added to the last  fully connected layer to avoid overfitting.
  
-The code for calculating the accuracy of the model is located in the 21st cell of the Ipython notebook.
+The code for calculating the accuracy of the model is located in the 26th cell of the Ipython notebook.
 
 My final model results were:
 * validation set accuracy of 94.4% 
@@ -206,7 +206,15 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The difficulties to classify are might be of following reasons...
+
+| Image			        |     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Priority road   		| Seems to be the easiest to classify									| 
+| Right of way 			| Sign inside the traingle should be clearly visible									|
+| Stop					| Stop text would be a challenge to detect								|
+| 50 km/h	      		| Speed sign detectable, But speed limit might be a difficulty    					 				|
+| 60 km/h   			| Speed sign detectable, But speed limit might be a difficulty       							|
 
 Here are the results of the prediction:
 
